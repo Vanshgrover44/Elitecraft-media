@@ -190,6 +190,30 @@ footer{padding:2rem 6vw;border-top:1px solid var(--line);display:flex;justify-co
 }
 </style>
 
+
+<style id="footer-policy-links">
+.footer-policies{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:1.1rem;
+  flex-wrap:wrap;
+}
+.footer-policies a{
+  color:inherit;
+  text-decoration:none;
+  transition:color .25s ease;
+}
+.footer-policies a:hover{
+  color:var(--gold);
+}
+@media(max-width:767px){
+  .footer-policies{
+    gap:.55rem .9rem;
+  }
+}
+</style>
+
 </head>
 <body>
 <nav id="nav">
@@ -223,16 +247,26 @@ footer{padding:2rem 6vw;border-top:1px solid var(--line);display:flex;justify-co
   <div class="policy-hero-inner">
     <div class="kicker">Payments / 03</div>
     <h1>Refund Policy</h1>
-    <p>Our cancellation and refund framework for advance payments, including the three-day cancellation window and treatment of work that has already started.</p>
+    <p>Our refund framework for digital services. Refunds are not available except where a refund is specifically provided under the applicable cancellation terms.</p>
     <div class="policy-meta"><span>EliteCraft Media</span><span>Operated by Rehaan</span><span>Effective 2026</span></div>
   </div>
 </header>
 
 <main class="policy-wrap">
   <div class="policy-grid">
-    <aside class="policy-nav"><span>On this page</span><ul><li><a href="#eligibility">1. Refund Eligibility</a></li><li><a href="#three-day">2. Cancellation Within 3 Days</a></li><li><a href="#after-three">3. Cancellation After 3 Days</a></li><li><a href="#work-started">4. Work Started, Completed or Delivered</a></li><li><a href="#client-delay">5. Client Delays</a></li><li><a href="#scope-change">6. Scope Changes</a></li><li><a href="#processor">7. Payment Processor & Bank Charges</a></li><li><a href="#request">8. How to Request a Cancellation</a></li><li><a href="#contact">9. Contact</a></li></ul></aside>
-    <article class="policy-content"><section id="eligibility"><h2>1. Refund Eligibility</h2><p>All project payments are treated as advance payments for reserving time and commencing digital services. Cancellation and refund eligibility depends on when the cancellation request is received and whether work has already started or been substantially performed.</p>
-<div class="policy-card-grid"><div class="policy-card"><span>Within 3 Days</span><p>Up to 50% of the advance payment may be refunded, subject to the terms below.</p></div><div class="policy-card"><span>After 3 Days</span><p>No refund is available for a client cancellation received after the three-day cancellation period.</p></div></div></section><section id="three-day"><h2>2. Cancellation Within 3 Days</h2><p>If the client requests cancellation within <strong>3 calendar days</strong> of the advance payment, the client may be eligible for a refund of up to <strong>50% of the advance amount</strong>.</p><p>The remaining portion may be retained to cover reserved project time, administrative work, planning, communication, initial concepts, setup or other work already undertaken.</p></section><section id="after-three"><h2>3. Cancellation After 3 Days</h2><p>Cancellation requests received after the initial three-day period are <strong>non-refundable</strong>. This applies even if the client has not yet supplied all content or if the project is paused due to delayed client responses.</p></section><section id="work-started"><h2>4. Work Started, Completed or Delivered</h2><p>Once work has started, been completed, delivered, published, approved or substantially performed, payments are <strong>non-refundable</strong>, regardless of whether the client subsequently chooses not to use the deliverables.</p>
+    <aside class="policy-nav"><span>On this page</span><ul><li><a href="#eligibility">1. Refund Eligibility</a></li><li><a href="#three-day">2. Cancellation</a></li><li><a href="#after-three">3. No Refunds Outside Applicable Cancellation Terms</a></li><li><a href="#work-started">4. Work Started, Completed or Delivered</a></li><li><a href="#client-delay">5. Client Delays</a></li><li><a href="#scope-change">6. Scope Changes</a></li><li><a href="#processor">7. Payment Processor & Bank Charges</a></li><li><a href="#request">8. How to Request a Cancellation</a></li><li><a href="#contact">9. Contact</a></li></ul></aside>
+    <article class="policy-content"><section id="eligibility">
+      <h2>1. Refund Eligibility</h2>
+      <p>All project payments are treated as advance payments for reserving time and commencing digital services. <strong>Payments are non-refundable.</strong> A refund is only considered where the applicable cancellation terms expressly provide for one.</p>
+      <div class="policy-callout"><p><strong>Important:</strong> A client cannot request a refund simply because they change their mind, stop using the service, delay the project, or are dissatisfied after work has started.</p></div>
+    </section><section id="three-day">
+      <h2>2. Cancellation</h2>
+      <p>Cancellation is governed by the applicable cancellation terms communicated to the client before or at the start of the project. Any refund, if applicable, is available only under those cancellation terms.</p>
+      <p>Cancellation does not automatically create a refund entitlement. Reserved project time, administrative work, planning, communication, setup, concepts and work already undertaken may be non-refundable.</p>
+    </section><section id="after-three">
+      <h2>3. No Refunds Outside Applicable Cancellation Terms</h2>
+      <p>Except where the applicable cancellation terms expressly provide otherwise, payments are <strong>non-refundable</strong>. This applies even if the client has not yet supplied all content or if the project is paused due to delayed client responses.</p>
+    </section><section id="work-started"><h2>4. Work Started, Completed or Delivered</h2><p>Once work has started, been completed, delivered, published, approved or substantially performed, payments are <strong>non-refundable</strong>, regardless of whether the client subsequently chooses not to use the deliverables.</p>
 <ul><li>Completed design concepts or revisions are non-refundable.</li><li>Delivered files, published websites or approved work are non-refundable.</li><li>Time reserved and work performed cannot be converted into a refund after the applicable cancellation period.</li></ul></section><section id="client-delay"><h2>5. Client Delays</h2><p>If a project is delayed because the client does not provide required content, images, files, access, approvals, corrections, feedback or other dependencies, the project may be paused or rescheduled. Such a delay does not create a refund entitlement.</p></section><section id="scope-change"><h2>6. Scope Changes</h2><p>A request to substantially change the original project brief, service, number of pages, structure or deliverables is treated as a scope change rather than a cancellation. Additional fees or a revised timeline may apply.</p></section><section id="processor"><h2>7. Payment Processor & Bank Charges</h2><p>Where a refund is approved, any non-recoverable payment-processing, currency-conversion or bank charges may be deducted where applicable. The refund will be processed using a reasonable available method connected to the original payment.</p></section><section id="request"><h2>8. How to Request a Cancellation</h2><p>Cancellation requests should be sent in writing to <a href="mailto:Info@EliteCraftMedia.com">Info@EliteCraftMedia.com</a> with the client's name, project/package, payment details and reason for cancellation. The applicable cancellation period is determined from the date the advance payment was received.</p></section><section id="contact"><h2>9. Contact</h2><div class="contact-box"><h3>Refund &amp; Cancellation Support</h3><p>EliteCraft Media — operated by Rehaan</p><p>Email: <a href="mailto:Info@EliteCraftMedia.com">Info@EliteCraftMedia.com</a></p><p>Phone: <a href="tel:+919306290409">+91-9306290409</a></p></div></section></article>
   </div>
 </main>
@@ -250,6 +284,12 @@ footer{padding:2rem 6vw;border-top:1px solid var(--line);display:flex;justify-co
   <span>EliteCraft Media — operated by Rehaan</span>
   
   <span>© 2026 All rights reserved</span>
+
+<span class="footer-policies">
+  <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+  <a href="business-policy.html">Business Policy</a>
+  <a href="refund-policy.html">Refund Policy</a>
+</span>
 </footer>
 
 <script>
