@@ -190,6 +190,30 @@ footer{padding:2rem 6vw;border-top:1px solid var(--line);display:flex;justify-co
 }
 </style>
 
+
+<style id="footer-policy-links">
+.footer-policies{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:1.1rem;
+  flex-wrap:wrap;
+}
+.footer-policies a{
+  color:inherit;
+  text-decoration:none;
+  transition:color .25s ease;
+}
+.footer-policies a:hover{
+  color:var(--gold);
+}
+@media(max-width:767px){
+  .footer-policies{
+    gap:.55rem .9rem;
+  }
+}
+</style>
+
 </head>
 <body>
 <nav id="nav">
@@ -253,6 +277,12 @@ footer{padding:2rem 6vw;border-top:1px solid var(--line);display:flex;justify-co
   <span>EliteCraft Media — operated by Rehaan</span>
   
   <span>© 2026 All rights reserved</span>
+
+<span class="footer-policies">
+  <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+  <a href="business-policy.html">Business Policy</a>
+  <a href="refund-policy.html">Refund Policy</a>
+</span>
 </footer>
 
 <script>
