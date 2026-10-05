@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business Policy — EliteCraft Media</title>
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0d12;--bg-2:#0f131a;--surface:#131820;--surface-2:#171d26;
+  --paper:#f4f0e8;--paper-2:#ebe5da;--ink:#f4f0e8;--ink-dark:#0a0d12;
+  --muted:#9aa2ae;--muted-dark:#5e6670;--gold:#c8a45a;--gold-bright:#e1c67f;
+  --line:rgba(244,240,232,.14);--line-dark:rgba(10,13,18,.14);
+  --white:#fff;--ease:cubic-bezier(.22,1,.36,1);
+}
+:root[data-theme="light"]{
+  --bg:#f4f0e8;--bg-2:#ebe5da;--surface:#fffdf8;--surface-2:#f7f3eb;
+  --paper:#f4f0e8;--paper-2:#ebe5da;--ink:#0a0d12;--ink-dark:#0a0d12;
+  --muted:#68707b;--muted-dark:#5e6670;--gold:#9b7730;--gold-bright:#b28c3e;
+  --line:rgba(10,13,18,.14);--line-dark:rgba(10,13,18,.14);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"DM Sans",sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden;transition:background .5s ease,color .5s ease}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.65'/%3E%3C/svg%3E")}
+h1,h2,h3{font-family:"Playfair Display",serif;font-weight:600}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+::selection{background:var(--gold);color:var(--ink-dark)}
+
+nav{position:fixed;top:0;left:0;width:100%;height:82px;display:flex;align-items:center;justify-content:space-between;padding:0 6vw;z-index:400;color:var(--ink);border-bottom:1px solid transparent;transition:all .5s var(--ease)}
+nav.scrolled{height:68px;background:rgba(10,13,18,.78);border-color:var(--line);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+:root[data-theme="light"] nav.scrolled{background:rgba(244,240,232,.82)}
+.logo{font-family:"Playfair Display",serif;font-size:1.2rem;letter-spacing:.02em;display:flex;align-items:center;gap:.65rem}
+.logo-mark{width:9px;height:9px;background:var(--gold);transform:rotate(45deg);display:block}
+nav ul{display:flex;list-style:none;gap:2rem;font-size:.82rem;letter-spacing:.03em}
+nav ul a{color:var(--muted);transition:color .25s ease}
+nav ul a:hover{color:var(--ink)}
+.nav-actions{display:flex;align-items:center;gap:.8rem}
+.theme-toggle,.hamburger{width:38px;height:38px;border:1px solid var(--line);background:transparent;color:inherit;display:flex;align-items:center;justify-content:center;cursor:pointer;border-radius:50%;transition:.3s ease}
+.theme-toggle:hover{border-color:var(--gold);color:var(--gold)}
+.hamburger{display:none;border-radius:0;border:0;flex-direction:column;gap:5px}
+.hamburger span{width:22px;height:1px;background:currentColor;transition:.35s ease}
+.hamburger.active span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.hamburger.active span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+.mobile-overlay{position:fixed;inset:0;background:var(--bg);z-index:300;display:flex;align-items:center;padding:0 9vw;clip-path:circle(0 at calc(100% - 35px) 35px);transition:clip-path .8s var(--ease);pointer-events:none}
+.mobile-overlay.open{clip-path:circle(150% at calc(100% - 35px) 35px);pointer-events:auto}
+.mobile-overlay ul{list-style:none;display:flex;flex-direction:column;gap:1rem}
+.mobile-overlay a{font:600 clamp(2.2rem,10vw,4.5rem)/1 "Playfair Display",serif;opacity:0;transform:translateY(24px);display:block;transition:opacity .5s ease,transform .7s var(--ease)}
+.mobile-overlay.open a{opacity:1;transform:translateY(0)}
+.mobile-overlay li:nth-child(1) a{transition-delay:.08s}.mobile-overlay li:nth-child(2) a{transition-delay:.14s}.mobile-overlay li:nth-child(3) a{transition-delay:.20s}.mobile-overlay li:nth-child(4) a{transition-delay:.26s}
+
+.policy-hero{padding:12rem 6vw 7rem;background:var(--bg);position:relative;overflow:hidden}
+.policy-hero:before{content:"";position:absolute;width:58vw;height:58vw;right:-25vw;top:-25vw;border-radius:50%;border:1px solid rgba(200,164,90,.14);box-shadow:0 0 120px rgba(200,164,90,.06)}
+.policy-hero-inner{max-width:1400px;margin:auto;position:relative;z-index:2}
+.kicker{font-size:.72rem;text-transform:uppercase;letter-spacing:.16em;color:var(--gold);display:flex;align-items:center;gap:.7rem;margin-bottom:1.2rem;font-weight:600}
+.kicker:before{content:"";width:34px;height:1px;background:var(--gold)}
+.policy-hero h1{font-size:clamp(3.5rem,8vw,8rem);line-height:.9;letter-spacing:-.05em;max-width:9ch}
+.policy-hero h1 em{color:var(--gold);font-style:italic}
+.policy-hero p{max-width:62ch;color:var(--muted);line-height:1.75;margin-top:2rem;font-size:1rem}
+.policy-meta{display:flex;gap:1.5rem;flex-wrap:wrap;margin-top:2rem;color:var(--muted);font-size:.78rem;text-transform:uppercase;letter-spacing:.08em}
+
+.policy-wrap{padding:6rem 6vw;background:var(--paper);color:var(--ink-dark)}
+.policy-grid{max-width:1200px;margin:auto;display:grid;grid-template-columns:260px 1fr;gap:5vw;align-items:start}
+.policy-nav{position:sticky;top:105px;border-top:1px solid var(--line-dark);padding-top:1rem}
+.policy-nav span{display:block;color:var(--gold);font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;margin-bottom:1rem}
+.policy-nav a{display:block;color:#68707b;font-size:.82rem;padding:.45rem 0;transition:color .25s ease}
+.policy-nav a:hover{color:var(--ink-dark)}
+.policy-content section{padding:0 0 3.5rem;margin:0 0 3.5rem;border-bottom:1px solid var(--line-dark)}
+.policy-content section:last-child{border-bottom:0;margin-bottom:0}
+.policy-content h2{font-size:clamp(1.7rem,3vw,2.6rem);line-height:1.05;margin-bottom:1rem}
+.policy-content h3{font-size:1.15rem;margin:1.8rem 0 .7rem}
+.policy-content p,.policy-content li{color:#626b76;line-height:1.8;font-size:.94rem}
+.policy-content p+p{margin-top:1rem}
+.policy-content ul{padding-left:1.2rem;margin-top:.7rem}
+.policy-content li{margin:.45rem 0}
+.policy-content strong{color:var(--ink-dark)}
+.policy-callout{margin-top:1.4rem;border-left:3px solid var(--gold);background:var(--paper-2);padding:1.25rem 1.4rem}
+.policy-callout p{color:#505963}
+.policy-card-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line-dark);border:1px solid var(--line-dark);margin-top:1.4rem}
+.policy-card{background:var(--paper);padding:1.4rem}
+.policy-card span{display:block;color:var(--gold);font:600 1.4rem "Playfair Display",serif;margin-bottom:.35rem}
+.policy-card p{font-size:.82rem}
+.contact-box{background:var(--ink-dark);color:var(--paper);padding:2rem;margin-top:1.4rem}
+.contact-box h3{color:var(--paper);margin-top:0}
+.contact-box p{color:#9aa2ae}
+.contact-box a{color:var(--gold-bright)}
+.cta{padding:6rem 6vw;background:#07090d;color:var(--paper)}
+.cta-inner{max-width:1200px;margin:auto}
+.cta h2{font-size:clamp(2.5rem,6vw,5rem);max-width:10ch;line-height:.95}
+.cta p{color:#9aa2ae;max-width:55ch;line-height:1.7;margin-top:1.2rem}
+.cta-link{display:inline-flex;margin-top:1.7rem;padding:.9rem 1.2rem;background:var(--gold);color:var(--ink-dark);font-weight:700;font-size:.78rem;text-transform:uppercase;letter-spacing:.04em}
+
+footer{padding:2rem 6vw;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap;color:#626a75;font-size:.72rem;letter-spacing:.04em}
+.footer-links{display:flex;gap:1.4rem;flex-wrap:wrap}
+.footer-links a{transition:color .25s ease}
+.footer-links a:hover{color:var(--gold)}
+
+@media(max-width:767px){
+  nav{height:68px;padding:0 6vw} nav.scrolled{height:60px} nav ul{display:none}.hamburger{display:flex}
+  .policy-hero{padding:9rem 6vw 5rem}.policy-hero h1{font-size:clamp(3.2rem,16vw,5.5rem);max-width:8ch}
+  .policy-hero p{font-size:.94rem}.policy-meta{gap:.8rem;line-height:1.5}
+  .policy-wrap{padding:4.5rem 6vw}.policy-grid{grid-template-columns:1fr;gap:2.5rem}
+  .policy-nav{position:relative;top:auto}.policy-nav a{display:inline-block;margin-right:1rem}
+  .policy-content section{padding-bottom:2.5rem;margin-bottom:2.5rem}
+  .policy-card-grid{grid-template-columns:1fr}.cta{padding:4.5rem 6vw}
+  footer{flex-direction:column;align-items:flex-start;padding:1.5rem 6vw}
+}
+</style>
+
+<style id="clean-header">
+/* Clean header: logo + theme toggle + hamburger only */
+
+.site-header .header-inner {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.site-header .header-actions {
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin-left:auto;
+}
+
+.mobile-menu .mobile-menu-inner {
+  display:flex;
+  flex-direction:column;
+  gap:0;
+}
+
+.mobile-menu .mobile-menu-inner a {
+  display:block;
+}
+</style>
+
+<style id="header-clean-final">
+#nav {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+#nav .nav-actions {
+  margin-left:auto;
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+</style>
+
+<style id="nav-responsive-final">
+/* Desktop + tablet: keep the homepage navigation centered */
+@media (min-width: 769px) {
+  #nav {
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  #nav > ul {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 34px !important;
+    flex: 1 1 auto !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
+
+  #nav .nav-actions {
+    margin-left: 0 !important;
+    flex: 0 0 auto !important;
+  }
+}
+
+/* Mobile: hide desktop nav and use the hamburger menu */
+@media (max-width: 768px) {
+  #nav > ul {
+    display: none !important;
+  }
+
+  #nav .nav-actions {
+    margin-left: auto !important;
+  }
+}
+</style>
+
+</head>
+<body>
+<nav id="nav">
+  <a class="logo" href="/"><span class="logo-mark"></span>EliteCraft Media</a>
+<ul>
+  <li><a href="index.html#about">About</a></li>
+  <li><a href="index.html#why-us">Why Us</a></li>
+  <li></li>
+  <li><a href="index.html#work">Work</a></li>
+  <li><a href="index.html#process">Process</a></li>
+  <li><a href="index.html#pricing">Pricing</a></li>
+  <li></li>
+</ul>
+  
+  <div class="nav-actions">
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+      <svg id="moon" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>
+      <svg id="sun" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8" style="display:none"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+    </button>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-overlay" id="mobile-overlay"><ul>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li><a href="/">EliteCraft Media</a></li>
+</ul></div>
+
+<header class="policy-hero">
+  <div class="policy-hero-inner">
+    <div class="kicker">Business / 02</div>
+    <h1>Business Policy</h1>
+    <p>A clear framework for services, pricing, payments, communication, revisions, timelines and delivery at EliteCraft Media.</p>
+    <div class="policy-meta"><span>EliteCraft Media</span><span>Operated by Rehaan</span><span>Effective 2026</span></div>
+  </div>
+</header>
+
+<main class="policy-wrap">
+  <div class="policy-grid">
+    <aside class="policy-nav"><span>On this page</span><ul><li><a href="#overview">1. Business Overview</a></li><li><a href="#services">2. Services</a></li><li><a href="#pricing">3. Pricing</a></li><li><a href="#payment">4. Payment & Project Start</a></li><li><a href="#timeline">5. Timelines & Dependencies</a></li><li><a href="#communication">6. Communication & Client Cooperation</a></li><li><a href="#revisions">7. Revisions & Additional Work</a></li><li><a href="#delivery">8. Delivery & Handover</a></li><li><a href="#digital">9. Digital Services</a></li><li><a href="#contact">10. Business Contact</a></li></ul></aside>
+    <article class="policy-content"><section id="overview"><h2>1. Business Overview</h2><p>EliteCraft Media is presented on its website as a one-person creative studio operated by Rehaan. The studio works directly with founders, creators and growing brands, providing creative, web and growth services without agency layers or account managers.</p></section><section id="services"><h2>2. Services</h2><p>Current service categories shown on the website are:</p><ul><li>Website Design &amp; Development</li><li>Logo &amp; Brand Identity</li><li>SEO &amp; Search Visibility</li><li>Digital Marketing</li><li>Magazine &amp; Editorial Design</li><li>Graphic Design &amp; Collateral</li></ul></section><section id="pricing"><h2>3. Pricing</h2><p>The website presents fixed package prices in USD, including Logo &amp; Identity at <strong>$95</strong>, Website Design at <strong>$300</strong>, and Magazine Layout at <strong>$180</strong>. The website also states that prices may vary depending on design complexity, number of pages and quantity, and that an exact quote should be obtained for a specific project.</p></section><section id="payment"><h2>4. Payment & Project Start</h2><p>A 50% advance is collected upfront via PayPal to begin work, with the remaining balance due before final files are delivered. Project work begins after the required advance payment and necessary client information are received.</p>
+<div class="policy-callout"><p><strong>Advance payment:</strong> Payment reserves project time and authorises EliteCraft Media to commence the agreed work.</p></div></section><section id="timeline"><h2>5. Timelines & Dependencies</h2><p>The website states that most projects take approximately 4 days to 2 weeks. Timelines depend on the service, scope, content availability and client response time.</p><p>Delays caused by missing content, images, files, account access, approvals, corrections or feedback may extend the project timeline. A timeline should therefore be treated as a working estimate unless a fixed date has been expressly confirmed in writing.</p></section><section id="communication"><h2>6. Communication & Client Cooperation</h2><p>EliteCraft Media follows a direct 1:1 working model. Clients are expected to provide accurate information, required files and timely feedback. The client should identify all material corrections within the included revision rounds and avoid sending fragmented or conflicting instructions.</p></section><section id="revisions"><h2>7. Revisions & Additional Work</h2><p>Two structured revision rounds are included in every package according to the website. Additional rounds can be added at a fixed rate. Work that materially changes the original scope, structure, number of pages, deliverables or creative direction may require an additional quotation.</p></section><section id="delivery"><h2>8. Delivery & Handover</h2><p>Final files, source assets and a walkthrough are provided where applicable and included in the agreed package. Final ownership transfers after the final payment has been received, as stated in the website FAQ.</p></section><section id="digital"><h2>9. Digital Services</h2><p>EliteCraft Media primarily provides digital/electronic services. Deliverables may include websites, digital graphics, logos, PDFs, editorial layouts, source files and other electronic assets. No physical goods are supplied unless specifically agreed in writing for a particular project.</p></section><section id="contact"><h2>10. Business Contact</h2><div class="contact-box"><h3>EliteCraft Media — operated by Rehaan</h3><p>Email: <a href="mailto:Info@EliteCraftMedia.com">Info@EliteCraftMedia.com</a></p><p>Phone: <a href="tel:+919306290409">+91-9306290409</a></p></div></section></article>
+  </div>
+</main>
+
+<section class="cta">
+  <div class="cta-inner">
+    <div class="kicker">EliteCraft Media</div>
+    <h2>Questions about these terms?</h2>
+    <p>If you need clarification about a project, payment, delivery timeline, revisions or cancellation, contact EliteCraft Media before proceeding.</p>
+    <a class="cta-link" href="mailto:Info@EliteCraftMedia.com">Contact Rehaan ↗</a>
+  </div>
+</section>
+
+<footer>
+  <span>EliteCraft Media — operated by Rehaan</span>
+  
+  <span>© 2026 All rights reserved</span>
+</footer>
+
+<script>
+(function(){
+  const root=document.documentElement, btn=document.getElementById('theme-toggle');
+  const moon=document.getElementById('moon'), sun=document.getElementById('sun');
+  const saved=localStorage.getItem('ecm-theme');
+  if(saved==='light') root.setAttribute('data-theme','light');
+  function icons(){
+    const light=root.getAttribute('data-theme')==='light';
+    moon.style.display=light?'none':'block'; sun.style.display=light?'block':'none';
+  }
+  icons();
+  btn.addEventListener('click',()=>{
+    const light=root.getAttribute('data-theme')==='light';
+    if(light){root.removeAttribute('data-theme');localStorage.setItem('ecm-theme','dark')}
+    else{root.setAttribute('data-theme','light');localStorage.setItem('ecm-theme','light')}
+    icons();
+  });
+})();
+
+const nav=document.getElementById('nav');
+function navScroll(){nav.classList.toggle('scrolled',window.scrollY>30)}
+navScroll();window.addEventListener('scroll',navScroll);
+
+const hamburger=document.getElementById('hamburger');
+const overlay=document.getElementById('mobile-overlay');
+function closeMenu(){hamburger.classList.remove('active');overlay.classList.remove('open');document.body.style.overflow='';}
+hamburger.addEventListener('click',()=>{
+  const open=overlay.classList.contains('open');
+  if(open) closeMenu();
+  else{hamburger.classList.add('active');overlay.classList.add('open');document.body.style.overflow='hidden';}
+});
+overlay.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>closeMenu()));
+</script>
+<div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-inner">
+        
+        
+        
+        
+      </div>
+    </div>
+</body>
+</html>
